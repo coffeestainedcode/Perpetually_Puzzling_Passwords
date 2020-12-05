@@ -55,7 +55,7 @@ module Perp_Puzz_Password(
     register #(10) displayReg (.clk(clk), .clr(0), .set(0), .enable(changeLED | reset), .D(numberCorrect), .Q(led));
         
     //game logic
-    Password_FSM PFSM (.clk(sclk), .enter(enter), .Password(correctPassword), .UserInput(userInput), 
+    Password_Checker PFSM (.clk(sclk), .enter(enter), .Password(correctPassword), .UserInput(userInput), 
                         .success(success), .numberCorrect(numberCorrect), .changeLED(changeLED));
     GameStateFSM GSFSM(.clk(sclk),.success(success),.fail(fail),.reset(reset),
                        .startTimeLEFT(nextTimeLEFT), .startTimeRIGHT(nextTimeRIGHT), .currentLevel(currentLevel), 

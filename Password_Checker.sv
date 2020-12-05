@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Password_FSM(
+module Password_Checker(
     input clk,
     input enter,
 //    input [3:0] length,
